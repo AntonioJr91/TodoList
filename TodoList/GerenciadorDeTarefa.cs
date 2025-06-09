@@ -6,28 +6,6 @@ namespace TodoList
     internal class GerenciadorDeTarefa
     {
         private List<Tarefa> listaDeTarefas = new();
-
-        public Tarefa this[int index]
-        {
-            get
-            {
-                if (index < 0 || index >= listaDeTarefas.Count)
-                {
-                    throw new IndexOutOfRangeException("Índice fora do intervalo.");
-                }
-
-                return listaDeTarefas[index];
-            }
-
-            set
-            {
-                if (index < 0 || index >= listaDeTarefas.Count)
-                    throw new IndexOutOfRangeException("Índice fora do intervalo.");
-
-                listaDeTarefas[index] = value;
-            }
-        }
-
         public void AdicionarTarefa()
         {
             Console.Clear();
